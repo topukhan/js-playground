@@ -11,7 +11,6 @@ const doorList = [
     "door10",
 ];
 const randomDoor = Math.floor(Math.random() * doorList.length) + 1;
-alert(randomDoor);
 let gameOver = false;
 counter = 3;
 let lifeCounter = document.getElementById("lifes");
