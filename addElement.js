@@ -3,6 +3,7 @@ const btn = document.getElementById("btn");
                 const numberOfElement = prompt("Enter number of elements to add ");
                 const input = document.getElementById("numberOfElement");
                 input.textContent = `${numberOfElement} elements added`;
+                input.classList.add('badge', 'bg-info');
 
                 let counter = 1;
                 for (let i = 0; i < numberOfElement; i++) {
