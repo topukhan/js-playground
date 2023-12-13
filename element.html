@@ -35,19 +35,75 @@
                                 >Element</a
                             >
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./DOM.html">DOM</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <article>semantic version first release</article>
-        <p>2nd child</p>
+
+        <div class="container">
+            <table class="table">
+                <caption>
+                    Table of M
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <script>
-            console.log(document.body.firstElementChild);
-            console.log(document.body.lastElementChild);
-            console.log(document.body.childElementCount);
-            const navBarFirstItem = document.querySelector('.navbar-nav li:first-child');
-            console.log(navBarFirstItem)
-            
+            document.addEventListener("DOMContentLoaded", function () {
+                let firstChild = document.body.firstElementChild;
+
+                let nthChildIndex = 5 - 1;
+                let nthChildElement = null;
+
+                for (let i = 0; i < firstChild.childNodes.length; i++) {
+                    if (firstChild.childNodes[i].nodeType === 1) {
+                        if (nthChildIndex === 0) {
+                            nthChildElement = firstChild.childNodes[i];
+                            break;
+                        } else {
+                            nthChildIndex--;
+                        }
+                    }
+                }
+                console.log(nthChildElement);
+                let table = document.body.children[2].firstElementChild;
+                console.log(table.rows);
+                console.log(table.tHead.lastElementChild);
+                console.log(table.caption);
+                console.log(table.tHead);
+                console.log(table.tBodies[0].rows);
+                console.log(table.tBodies[0].rows[0].cells);
+                console.log(table.tBodies[0].rows[1].rowIndex);
+            });
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
