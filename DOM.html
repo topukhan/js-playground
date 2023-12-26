@@ -50,6 +50,7 @@
             <div class="mb-4">
                 <p class="lead">Guess the word:</p>
                 <p id="wordToGuess" class="font-weight-bold"></p> 
+                <span id="correctWord" style="display: none;"></span>
             </div>
             <div class="mt-4">
                 <p class="lead fw-bold">Attempts left: <span id="attempts">6</span></p>
@@ -61,10 +62,11 @@
                     <input type="text" id="letterInput" class="form-control w-50" maxlength="1" style="text-transform: uppercase;">
                 </div>
                 <button type="submit" class="btn btn-primary" onclick="checkGuess()">Submit Guess</button>
-                <button class="btn btn-success" onclick="resetGame()">Play Again</button>
+                <button type="button" class="btn btn-success" onclick="resetGame()">Play Again</button>
             </form>
         </div>
         
     </body>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
     <script src="./js/DOM.js"></script>
 </html>
