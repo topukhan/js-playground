@@ -50,19 +50,19 @@
             <div class="mb-4">
                 <p class="lead">Guess the word:</p>
                 <p id="wordToGuess" class="font-weight-bold"></p> 
-                <span id="correctWord" style="display: none;"></span>
+                <span id="correctWord" style="display: none;" class="fw-bold"></span>
             </div>
             <div class="mt-4">
-                <p class="lead fw-bold">Attempts left: <span id="attempts">6</span></p>
+                <p class="lead fw-bold">Life left: <span id="attempts">3</span></p>
                 <p id="feedback" class="font-weight-bold"></p>
             </div>
             <form id="letterForm">
                 <div class="mb-4">
                     <label for="letterInput">Enter a letter:</label>
-                    <input type="text" id="letterInput" class="form-control w-50" maxlength="1" style="text-transform: uppercase;">
+                    <input type="text" id="letterInput" class="form-control w-50" maxlength="1" style="text-transform: uppercase;" required>
                 </div>
                 <button type="submit" class="btn btn-primary" onclick="checkGuess()">Submit Guess</button>
-                <button type="button" class="btn btn-success" onclick="resetGame()">Play Again</button>
+                <button id="playAgainBtn" type="button" class="btn btn-success" onclick="resetGame()">Play Again</button>
             </form>
         </div>
         
