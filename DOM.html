@@ -45,26 +45,53 @@
         <!-- end nav bar -->
 
         <!-- Word guessing game -->
-        <div class="container">
-            <h1 class="mb-4">Word Guessing Game</h1>
-            <div class="mb-4">
-                <p class="lead">Guess the word:</p>
-                <p id="wordToGuess" class="font-weight-bold"></p> 
-                <span id="correctWord" style="display: none;" class="fw-bold"></span>
-            </div>
-            <div class="mt-4">
-                <p class="lead fw-bold">Life left: <span id="attempts">3</span></p>
-                <p id="feedback" class="font-weight-bold"></p>
-            </div>
-            <form id="letterForm">
-                <div class="mb-4">
-                    <label for="letterInput">Enter a letter:</label>
-                    <input type="text" id="letterInput" class="form-control w-50" maxlength="1" style="text-transform: uppercase;" required>
+        <div class="container mt-2">
+            <div class="row">
+                <!-- Word Guessing Game section -->
+                <div class="col-lg-6">
+                    <div>
+                        <h1 class="mb-4">Word Guessing Game</h1>
+                        <div class="mb-4">
+                            <p class="lead">Guess the word:</p>
+                            <p id="wordToGuess" class="font-weight-bold"></p> 
+                            <span id="correctWord" style="display: none;" class="fw-bold"></span>
+                        </div>
+                        <div class="mt-4">
+                            <p class="lead fw-bold">Life left: <span id="attempts">3</span></p>
+                            <p id="feedback" class="font-weight-bold"></p>
+                        </div>
+                        <form id="letterForm">
+                            <div class="mb-4">
+                                <label for="letterInput">Enter a letter:</label>
+                                <input type="text" id="letterInput" class="form-control w-75" maxlength="1" style="text-transform: uppercase;" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2" onclick="checkGuess()">Submit Guess</button>
+                            <button id="playAgainBtn" type="button" class="btn btn-success" onclick="resetGame()">Play Again</button>
+                        </form>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary" onclick="checkGuess()">Submit Guess</button>
-                <button id="playAgainBtn" type="button" class="btn btn-success" onclick="resetGame()">Play Again</button>
-            </form>
+                <!-- Joke section -->
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="card text-center p-4">
+                        <div>
+                            <h2 class="card-title">Joke of the Day</h2>
+                            <p id="Question" class="card-text">Get a Riddle and give the Answer</p>
+                            <p id="Answer" class="card-text fw-bold">Answer in 15 Second</p>
+                            <div id="timeLeft" class=""></div>
+                        </div>
+                        <div>
+                            <button onclick="generateJoke()" class="btn btn-primary">Get Joke</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+
+
+        <script>
+
+        </script>
         
     </body>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
